@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar"; // Ensure you have a Navbar for navigation
+import AboutMe from "./pages/AboutMe";
+import Projects from "./pages/Projects";
+import ContactPage from "./pages/Contact";
+import Skills from "./pages/Skills";
+import HomePage from "./pages/Home";
+import AuthorsNote from "./pages/AuthorsNote";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar /> {/* Add Navbar for navigation */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/note" element={<AuthorsNote />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

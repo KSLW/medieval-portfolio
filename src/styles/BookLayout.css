@@ -1,0 +1,111 @@
+* {
+  font-family: "MedievalSharp", serif !important;
+}
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #f5f5dc;
+  /* Light parchment-like background */
+}
+/* Flipbook Container - Main Styling */
+.flipbook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-width: 1200px;
+  max-height: 900px;
+  min-width: 320px;
+  /* Adjusted for better mobile support */
+  min-height: 500px;
+  /* Prevent disappearing */
+  overflow: hidden;
+}
+/* Book pages should scale dynamically */
+.book-page {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  background: url("../assets/parchment-bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+/* Ensure book pages don’t disappear on mobile */
+@media (max-width: 670px) {
+  .flipbook-container {
+    width: 95vw;
+    height: auto;
+    min-height: 70vh;
+    /* Adjusted for better mobile scaling */
+  }
+  .book-page {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+/* Ensure Navbar Stays Fixed */
+.navbar {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: auto;
+}
+/* Adjust navbar alignment on mobile */
+@media (max-width: 670px) {
+  .navbar {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+}
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+@media (max-width: 670px) {
+  .navbar ul {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+  .navbar ul.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .hamburger {
+    display: block;
+  }
+}

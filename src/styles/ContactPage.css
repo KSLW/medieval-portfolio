@@ -1,0 +1,50 @@
+.contact-container {
+	text-align: center;
+	padding: 20px;
+}
+h2 {
+	font-size: 28px;
+	margin-bottom: 20px;
+	color: #3e2723;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+input, textarea {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #3e2723;
+	border-radius: 5px;
+	font-size: 16px;
+}
+textarea {
+	height: 100px;
+	resize: none;
+}
+button {
+	background: #3e2723;
+	color: white;
+	font-size: 16px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+button:disabled {
+	background: #a1887f;
+	cursor: not-allowed;
+}
+button:hover:not(:disabled) {
+	background: #5d4037;
+}
+.status-message {
+	font-size: 14px;
+	margin-top: 10px;
+	color: #3e2723;
+	font-weight: bold;
+}

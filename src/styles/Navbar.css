@@ -1,0 +1,47 @@
+/* Navbar - General Styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Prevents content overflow on smaller screens */
+  position: relative;
+  background: #222;
+  padding: 15px 20px;
+}
+/* Navigation List */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar ul li {
+  margin: 0 15px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+  will-change: transform, color;
+}
+/* Hover & Active States */
+.navbar ul li a:hover,.navbar ul li a.active {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+/* Animated Bookmark Ribbon */
+.bookmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: #ffcc00;
+  color: #222;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 85%, 0 70%);
+  animation: slideIn 0.5s ease-in-out;
+  will-change: transform, opacity;
+}

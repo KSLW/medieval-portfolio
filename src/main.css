@@ -1,0 +1,14 @@
+@import url("./styles/AboutMe.css");
+@import url("./styles/BookLayout.css");
+@import url("./styles/ContactPage.css");
+@import url("./styles/CoverPage.css");
+@import url("./styles/HomePage.css");
+@import url("./styles/Navbar.css");
+@import url("./styles/ProjectsPage.css");
+@import url("./styles/SkillsPage.css");
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Special+Elite&display=swap');
+
+*{
+    font-family: "MedievalSharp" !important;
+}
+
