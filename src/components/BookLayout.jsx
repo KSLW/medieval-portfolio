@@ -21,7 +21,7 @@ const BookLayout = () => {
             width={550}
             height={750}
             showCover={true}
-            flippingTime={900}
+            flippingTime={3800}
             useMouseEvents={true}
             clickEventForward={true}
             swipeDistance={15}
