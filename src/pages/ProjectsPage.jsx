@@ -3,10 +3,10 @@ import "../styles/ProjectsPage.css";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A cool project that does amazing things.",
-    demoLink: "#",
-    githubLink: "#",
+    title: "Quote Generator",
+    description: "An awesome quote generator that inspires you.",
+    demoLink: "https://get-inspiered.netlify.app/",
+    githubLink: "https://github.com/KSLW/Quotes",
   },
   {
     title: "Project Two",
