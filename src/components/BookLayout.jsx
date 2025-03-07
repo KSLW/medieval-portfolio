@@ -26,7 +26,9 @@ const BookLayout = () => {
             clickEventForward={true}
             swipeDistance={15}
             onFlip={(e) => {
-              if (e.data !== 0) play();
+              if (e.data !== 0) {
+                play();
+              }
             }}
           >
             {/* Cover Page */}
